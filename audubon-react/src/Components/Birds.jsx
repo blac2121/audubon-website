@@ -5,7 +5,7 @@ export default function Birds(props) {
   const params = useParams();
   console.log(params.name)
 
-  const bird = props.birds.find((bird) => params.name === bird.name)
+  const bird = props.birds.find((bird) => params.name === bird.name);
 
   if (!bird) {
     return <h3>The birds have migrated!</h3>
@@ -21,9 +21,7 @@ export default function Birds(props) {
         <div><h6 className="view-genus">({bird.genus})</h6></div>
         <div><h4 className="view-conservation-title">Conservation status</h4></div>
         <div><p className="view-conservation-description">{bird.conservationStatus}</p></div>
-        <div>
-          <button className="read-more-button"><a href={bird.homepage}>Read More</a></button>
-        </div>                
+        <div><button className="read-more-button"><a target="_blank" href={bird.homepage}>Read More</a></button></div>                  
       </div>       
     </div>
   );

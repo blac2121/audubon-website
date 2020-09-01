@@ -3,15 +3,18 @@ import { Link, Route, Switch } from 'react-router-dom';
 import birdData from "./data"
 import Birds from "./Components/Birds"
 import './App.css';
+import CreateBirds from './Components/CreateBirds';
 
 function App() {
   const [birds, setBirds] = useState(birdData);
+  // const [fetchBirds, setFetchBirds] = useState(false);
 
  
   return (
     <div className="App">
       <header>
         <Link to="/" className="site-header">Audubon Society</Link>
+        <Link to="/new"className="new-add-bird">Add a new bird</Link>
       </header>
       <main>
         <Switch>
@@ -31,7 +34,10 @@ function App() {
           </Route>
           <Route path="/birds/:name">
             <Birds birds={birds}/>
-          </Route>          
+          </Route> 
+          <Route exact path="/new">
+            <CreateBirds setBirds={setBirds}/>
+          </Route>
         </Switch>
 
       </main>
