@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-export default function Birds() {
+export default function Birds(props) {
   return (
     <div>
+      {props.}
       {/* {currencies.map((currency) => (
         <h2>
           <Link to={`/price/${currency.currency}`}>{currency.currency}</Link>: 

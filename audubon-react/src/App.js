@@ -19,18 +19,16 @@ function App() {
       <main>
         <h2 className="home-header">Birds</h2>
         <div classname="home-birds">
-          <ul>
-            {
-              birds.map((bird) => (
-                <li>
-                  {bird.name}
-                </li>
-              ))
-            }
-          </ul>
+          {
+            birds.map((bird) => (
+              <div>
+                <img src={bird.image}/>
+              </div>
+            ))
+          }
         </div>
         <Route exact path="/:birds">
-          <Birds />
+          <Birds birds={birds}/>
         </Route>
       </main>
     </div>
