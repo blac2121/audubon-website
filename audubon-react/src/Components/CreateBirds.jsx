@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from 'react-router-dom';
 // import styled from 'styled-components'
 
 export default function CreateBirds(props) {
@@ -7,6 +8,8 @@ export default function CreateBirds(props) {
   const [image, setImage] = useState("");
   const [homepage, setHomepage] = useState("");
   const [conservationStatus, setConservationStatus] = useState("");
+  const history = useHistory();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +22,7 @@ export default function CreateBirds(props) {
         conservationStatus
       }];
     })
-    // want to return to home page
+    history.push("/") 
   }
 
   // const AddBirdContainer = styled.div`
