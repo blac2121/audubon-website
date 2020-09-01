@@ -79,7 +79,7 @@ header {
   padding: 30px;
   color: #595757;
   height: 300px;
-  width: 300px;
+  width: 375px;
 }
 
 .view-header {
@@ -100,6 +100,7 @@ header {
 
 .view-conservation-description {
   margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .read-more-button,
