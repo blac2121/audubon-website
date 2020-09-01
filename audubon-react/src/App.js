@@ -11,8 +11,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="site-header">Audubon Society</h1>
-        <Link to="/birds">Home</Link>
+        <Link to="/birds" className="site-header">Audubon Society</Link>
       </header>
       <main>
         <Switch>

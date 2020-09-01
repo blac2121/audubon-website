@@ -13,11 +13,15 @@ export default function Birds(props) {
 
   return (
     <div>
-      <img src={bird.image}></img>
-      <h3 className="view-header">{bird.name}</h3>
-      <h5 className="view-genus">{bird.genus}</h5>
-      <h4 className="view-conservation-title">Conservation status</h4>
-      <p className="view-conservation-description">{bird.conservationStatus}</p>
+      <div className="view-left-container">
+        <img src={bird.image}></img>
+      </div>
+      <div className="view-right-container">
+        <div><h3 className="view-header">{bird.name}</h3></div>
+        <div><h5 className="view-genus">{bird.genus}</h5></div>
+        <div><h4 className="view-conservation-title">Conservation status</h4></div>
+        <div><p className="view-conservation-description">{bird.conservationStatus}</p></div>
+      </div>       
     </div>
   );
 }
