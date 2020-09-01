@@ -7,29 +7,30 @@ import './App.css';
 function App() {
   const [birds, setBirds] = useState(birdData);
 
+ 
   return (
     <div className="App">
       <header>
         <h1 className="site-header">Audubon Society</h1>
+        <Link to="/birds">Home</Link>
       </header>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/:birds">Birds</Link>
-      </nav>
       <main>
-        <h2 className="home-header">Birds</h2>
-        <div classname="home-birds">
-          {
-            birds.map((bird) => (
-              <div>
-                <img src={bird.image}/>
-              </div>
-            ))
-          }
-        </div>
-        <Route exact path="/:birds">
-          <Birds birds={birds}/>
-        </Route>
+        <Switch>
+          <Route exact path="/birds">
+            <h2 className="home-header">Birds</h2>
+            <div className="home-birds-container">
+              {birds.map((bird, index) => (
+                <Link to={`/birds/${bird.name}`}> 
+                <img src={bird.image} key={index} /> 
+                </Link>
+              ))}
+            </div>
+          </Route>
+          <Route path="/birds/:name">
+            <Birds birds={birds}/>
+          </Route>          
+        </Switch>
+
       </main>
     </div>
   );
