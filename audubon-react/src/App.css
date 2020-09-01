@@ -29,6 +29,12 @@ header {
 .home-birds {
   height: 175px;
   width: 175px;
+  margin: 15px;
+}
+
+.home-birds:hover {
+  box-shadow: 2px 2px 2px 2px #888888;
+  border-radius: 3px;
 }
 
 .site-header {
@@ -48,15 +54,18 @@ header {
 }
 
 .view-left-container {
-  flex-grow: 1;
   padding-top: 50px;
   text-align: center;
+  height: 300px;
+  width: 300px;
 }
 
 .view-right-container {
   flex-grow: 2;
   padding: 30px;
   color: #595757;
+  height: 300px;
+  width: 300px;
 }
 
 .view-header {
@@ -91,12 +100,14 @@ header {
   color: white;
 }
 
-/* .img-view {
-  width: 400%;
-  height: auto;
+.home-img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-.home-img {
-  width: 75%;
-  height: auto;
-} */
+.img-view {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

@@ -11,11 +11,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <Link to="/birds" className="site-header">Audubon Society</Link>
+        <Link to="/" className="site-header">Audubon Society</Link>
       </header>
       <main>
         <Switch>
-          <Route exact path="/birds">
+          <Route exact path="/">
             <div className="home-container">
               <h2 className="home-header">Birds</h2>
               <div className="home-birds-container">
