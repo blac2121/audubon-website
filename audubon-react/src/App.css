@@ -11,19 +11,27 @@ header {
 
 .home-container {
   display: flex;
-  flex-direction: column;
+  flex-flow: wrap;
   width: 850px;
   margin: 50px auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .home-header {
-  padding: 10px;
+  padding-left: 10px;
   color: #595757;
 }
 
 .new-bird-button {
   text-decoration: none;
   color: #595757;
+  font-style: italic;
+  transition: all .2s ease-in-out;
+}
+
+.new-bird-button:hover {
+  transform: scale(1.1); 
 }
 
 .home-birds-container {
@@ -145,3 +153,7 @@ input {
   margin-bottom: 10px;
 }
 
+.No-details {
+  color: #595757;
+  font-style: italic;
+}

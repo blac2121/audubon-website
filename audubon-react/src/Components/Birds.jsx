@@ -20,7 +20,9 @@ export default function Birds(props) {
         <div><h3 className="view-header">{bird.name}</h3></div>
         <div><h6 className="view-genus">({bird.genus})</h6></div>
         <div><h4 className="view-conservation-title">Conservation status</h4></div>
-        <div><p className="view-conservation-description">{bird.conservationStatus}</p></div>
+        {bird.conservationStatus === "" ? <h5 className="No-details">No conservation details</h5> :
+          <div><p className="view-conservation-description">{bird.conservationStatus}</p></div>
+        }
         <div><button className="read-more-button"><a target="_blank" href={bird.homepage}>Read More</a></button></div>                  
       </div>       
     </div>

@@ -14,7 +14,6 @@ function App() {
     <div className="App">
       <header>
         <Link to="/" className="site-header">Audubon Society</Link>
-        {/* <Link to="/new"className="new-add-bird">Add a new bird</Link> */}
       </header>
       <main>  
         <Switch>
