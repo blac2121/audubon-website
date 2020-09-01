@@ -22,7 +22,7 @@ function App() {
                 {birds.map((bird, index) => (
                   <div className="home-birds">
                     <Link to={`/birds/${bird.name}`} > 
-                    <img src={bird.image} key={index} /> 
+                    <img className="home-img" src={bird.image} key={index} /> 
                     </Link>
                   </div>
                 ))}

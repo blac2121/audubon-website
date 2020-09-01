@@ -50,6 +50,7 @@ header {
 .view-left-container {
   flex-grow: 1;
   padding-top: 50px;
+  text-align: center;
 }
 
 .view-right-container {
@@ -77,3 +78,25 @@ header {
 .view-conservation-description {
   margin-top: 0;
 }
+
+.read-more-button {
+  padding: 8px 12px;
+  background-color: #5B5A5A;
+  border-radius: 3px;
+  border: 1px solid #5B5A5A;
+}
+
+.read-more-button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* .img-view {
+  width: 400%;
+  height: auto;
+}
+
+.home-img {
+  width: 75%;
+  height: auto;
+} */
