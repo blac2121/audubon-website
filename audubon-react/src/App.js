@@ -14,13 +14,14 @@ function App() {
     <div className="App">
       <header>
         <Link to="/" className="site-header">Audubon Society</Link>
-        <Link to="/new"className="new-add-bird">Add a new bird</Link>
+        {/* <Link to="/new"className="new-add-bird">Add a new bird</Link> */}
       </header>
-      <main>
+      <main>  
         <Switch>
           <Route exact path="/">
             <div className="home-container">
               <h2 className="home-header">Birds</h2>
+              <Link to="/new"className="new-bird-button">(Add a new bird)</Link>
               <div className="home-birds-container">
                 {birds.map((bird, index) => (
                   <div className="home-birds">

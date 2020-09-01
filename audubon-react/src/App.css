@@ -21,6 +21,11 @@ header {
   color: #595757;
 }
 
+.new-bird-button {
+  text-decoration: none;
+  color: #595757;
+}
+
 .home-birds-container {
   display: flex;
   flex-flow: wrap;
