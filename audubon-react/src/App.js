@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, Route, Switch } from 'react-router-dom';
 import birdData from "./data"
 import Birds from "./Components/Birds"
@@ -16,13 +16,17 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/birds">
-            <h2 className="home-header">Birds</h2>
-            <div className="home-birds-container">
-              {birds.map((bird, index) => (
-                <Link to={`/birds/${bird.name}`}> 
-                <img src={bird.image} key={index} /> 
-                </Link>
-              ))}
+            <div className="home-container">
+              <h2 className="home-header">Birds</h2>
+              <div className="home-birds-container">
+                {birds.map((bird, index) => (
+                  <div className="home-birds">
+                    <Link to={`/birds/${bird.name}`} > 
+                    <img src={bird.image} key={index} /> 
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           </Route>
           <Route path="/birds/:name">
@@ -36,13 +40,3 @@ function App() {
 }
 
 export default App;
-
-// {
-//   name: "Acadian Flycatcher",
-//   genus: "Empidonax virescens",
-//   conservationStatus:
-//     "Would be vulnerable to loss of habitat, but no significant decline noted so far. In some regions, Brown-headed Cowbirds often lay eggs in nests of this species.",
-//   image:
-//     "https://www.audubon.org/sites/default/files/styles/bird_illustration/public/4492_Sibl_9780307957900_art_r1.jpg?itok=8HuhVVIy",
-//   homepage: "https://www.audubon.org/field-guide/bird/acadian-flycatcher"
-// },

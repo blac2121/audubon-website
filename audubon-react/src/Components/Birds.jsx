@@ -12,13 +12,13 @@ export default function Birds(props) {
   }
 
   return (
-    <div>
+    <div className="view-main-container">
       <div className="view-left-container">
         <img src={bird.image}></img>
       </div>
       <div className="view-right-container">
         <div><h3 className="view-header">{bird.name}</h3></div>
-        <div><h5 className="view-genus">{bird.genus}</h5></div>
+        <div><h6 className="view-genus">({bird.genus})</h6></div>
         <div><h4 className="view-conservation-title">Conservation status</h4></div>
         <div><p className="view-conservation-description">{bird.conservationStatus}</p></div>
       </div>       
